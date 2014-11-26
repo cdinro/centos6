@@ -112,7 +112,7 @@ ${Echo} "Previous installation found, performing upgrade."
         chmod -R 755 /opt/shibboleth-identityprovider-${shibVer}
 
         cp /opt/shibboleth-idp/metadata/idp-metadata.xml /opt/shibboleth-identityprovider/src/main/webapp/metadata.xml
-        tar zcf ${bupFile} --remove-files /opt/shibboleth-idp
+        tar zcfP ${bupFile} --remove-files /opt/shibboleth-idp
 
         unlink /opt/shibboleth-identityprovider
         ln -s /opt/shibboleth-identityprovider-${shibVer} /opt/shibboleth-identityprovider
